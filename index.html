@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <link rel="stylesheet" type="text/css" href="style.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
+      <title>Magebit Test Work</title>
+   </head>
+   <body>
+      <div class="background-wrapper">
+         <div class="page-background"></div>
+      </div>
+      <div class="container" id="container">
+         <!-- Sign up container -->
+         <div class="signup-left">
+            <h1>Don't have an account?</h1>
+            <svg width="50" height="15">
+               <line x1="1" y1="10" x2="50" y2="10"/>
+            </svg>
+            <p>Lorem ipsum dolor sit amet, consectetur<br> adipiscing elit, sed do<br> eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <button id="signUpbutton" class="button">Sign Up</button>
+         </div>
+         <!-- Sign in container -->
+         <div class="signin-right">
+            <h1>Have an account?</h1>
+            <br>
+            <svg width="50" height="15">
+               <line x1="1" y1="10" x2="50" y2="10"/>
+            </svg>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <button id="signInbutton" class="button">Sign In</button>
+         </div>
+         <!-- Login form -->
+         <div class="login" id="loginform">
+            <form method="POST" action="login.php">
+               <h1 class="logo">Login</h1>
+               <img src="logo.png">
+               <br><br>
+               <svg width="100" height="15">
+                  <line x1="1" y1="10" x2="50" y2="10"/>
+               </svg>
+               <br>
+               <p><span class="required-field">Email</span><img src="mail_inactive.png"><br>
+                  <input type="email" name="email" required />
+               </p>
+               <p><span class="required-field">Password</span><img src="lock_inactive.png"><br> 
+                  <input type="password" name="password" required />
+               </p>
+               <button id="LogInbutton" class="button1">Login</button>
+               <a href="#">Forgot?</a>
+            </form>
+         </div>
+         <!-- Sign up form -->
+         <div class="signup" id="signupform">
+            <form method="POST" action="register.php">
+               <h1 class="logo">Sign Up</h1>
+               <img src="logo.png">
+               <br><br>
+               <svg width="100" height="15">
+                  <line x1="1" y1="10" x2="50" y2="10"/>
+               </svg>
+               <br><br>
+               <span class="required-field">Name</span><img src="user_inactive.png">
+               <br>
+               <input type="text" name="name" required />
+               <br><br>
+               <span class="required-field">Email</span><img src="mail_inactive.png">
+               <br>
+               <input type="email" name="email" required />
+               <br><br>
+               <span class="required-field">Password</span><img src="lock_inactive.png">
+               <br>
+               <input type="password" name="password" required />
+               <br><br>
+               <button class="button1" id="registerButton">Sign up</button>
+            </form>
+         </div>
+      </div>
+      <footer>ALL RIGHTS RESERVED "MAGEBIT" 2016.</footer>
+      <!-- Link to Javascript animation -->
+      <script type="text/javascript" src="animation.js"></script>
+   </body>
+</html>
