@@ -1,0 +1,43 @@
+		/*CSS for welcome.php*/
+
+*{
+	font-family: 'Source Sans Pro', sans-serif;
+}
+
+body{
+	background-image: url(Background.png);
+	background-size: cover;
+    background-repeat: no-repeat;
+	background-position: center top;
+}
+
+div {
+	background: #1b2347;
+	position: fixed;
+ 	top: 50%;
+  	left: 50%;
+  	transform: translate(-50%, -50%);
+  	text-align: center;
+  	color: white;
+  	opacity: 0.9;
+}
+
+.button {
+    border-radius: 20px;
+    border: 2px solid #33b5e5;
+    background-color: #001a33;
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 14px 35px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 5%;
+}
+.button:hover {
+  background-color: #49abfe;
+}
+
+.button:focus{
+	outline: none;
+}
