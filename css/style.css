@@ -1,0 +1,275 @@
+*{
+	font-family: 'Source Sans Pro', sans-serif;
+}
+
+.background-wrapper{
+	position: absolute;
+	top:0;
+	left: 50%;
+	-webkit-transform: translateX(-50%);
+	-ms-transform: translateX(-50%);
+	transform: translateX(-50%);
+	height: 768px;
+	width: 1360px;
+    overflow: hidden;
+}
+
+/*Background animation*/
+.page-background{
+	background: url(Background.png);
+	background-size: cover;
+    background-repeat: no-repeat;
+	background-position: center top;
+	position: absolute;
+	height: 100%;
+    width: 100%;
+    -webkit-animation: bganim 11s infinite linear;
+    animation: bganim 11s infinite linear;
+
+}
+@-webkit-keyframes bganim {
+    0% {
+		-webkit-transform: scale(1);
+		transform: scale(1);
+	}
+    50% {
+		-webkit-transform: scale(1.2);
+		transform: scale(1.2);
+    }
+    100%{
+		-webkit-transform: scale(1);
+		transform: scale(1);
+    }
+}
+@keyframes bganim {
+    0% {
+		-webkit-transform: scale(1);
+		transform: scale(1);
+	}
+    50% {
+		-webkit-transform: scale(1.2);
+		transform: scale(1.2);
+    }
+    100%{
+		-webkit-transform: scale(1);
+		transform: scale(1);
+    }
+}
+
+h1 {
+	color: #ffffff;
+	font-weight: normal;
+	font-size: 30px;
+}
+
+p {
+    font-size: 14px;
+    font-weight: 100;
+    line-height: 20px;
+    letter-spacing: 0.5px;
+    margin: 20px 0 30px;
+    color: white;
+}
+
+.logo {
+	display: inline;
+}
+
+img {
+	float: right;
+}
+
+.login h1{
+	color: #000000;
+}
+
+.signup h1{
+	color: #000000;
+}
+
+.login p{
+	color: gray;
+}
+
+.signup p{
+	color: gray;
+}
+
+.signup span{
+	font-size: 14px;
+    font-weight: 100;
+    line-height: 20px;
+    letter-spacing: 0.5px;
+    margin: 20px 0 30px;
+	color: gray;
+}
+
+.login a{
+	color: gray;
+	text-decoration: none;
+	float:right;
+	margin: auto;
+}
+
+.required-field::after {
+    content: "*";
+    color: red;
+}
+
+.container {
+	height: 390px;
+    display: flex;
+    flex-direction: row;
+    overflow: visible;
+    min-width: 768px;
+    position: absolute;
+    margin: auto;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(27, 35, 71, 0.9);
+
+}
+
+.signup-left {
+	justify-content: left;
+	width: 50%;
+	padding-top: 5%;
+	padding-left: 10%;
+	padding-right: 10%;
+	padding-bottom: 5%;
+}
+
+.signin-right {
+	justify-content:right;
+	width: 50%; 
+	padding-top: 10%;
+	padding-right: 10%;
+	padding-left: 10%;
+
+}
+
+.login {
+	width: 384px;
+	height: 110%;
+	box-sizing: border-box;
+	padding-top: 10%;
+	padding-right: 10%;
+	padding-left: 10%;
+	position: absolute;
+	right: 0;
+	top: -20px; 
+	background-color: #ffffff;
+	margin-right: 2%;
+	z-index: 3;
+	transition: all 1s ease-in-out;
+	box-shadow: 0 8px 8px -8px gray;
+}
+
+
+.signup {
+	width: 384px;
+	height: 110%;
+	box-sizing: border-box;
+	padding-top: 10%;
+	padding-right: 10%;
+	padding-left: 10%;
+	position: absolute;
+	right: 0;
+	top: -20px;
+	margin-right: 3%;
+	background-color: #ffffff;
+	z-index: 1;
+	transition: all 1s ease-in-out;
+}
+
+.button {
+    border-radius: 20px;
+    border: 2px solid #33b5e5;
+    background-color: #001a33;
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 14px 35px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+.button:hover {
+  background-color: #49abfe;
+}
+
+.button:focus{
+	outline: none;
+}
+
+.button1{
+	background-color: #f89a35;
+	border-radius: 20px;
+	border: none;
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 14px 35px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    display: inline;
+}
+
+.button1:hover{
+	background-color: #f8bf35;
+}
+
+.button1:focus{
+	outline: none;
+}
+
+input {
+  border: none;
+  border-bottom: 2px solid gray;
+  width: 230px;
+}
+
+input:focus{
+	outline: none;
+}	
+
+
+line{
+	stroke: #33b5e5;
+	stroke-width:3;
+}
+
+footer{
+	position: absolute;
+	text-align: center;
+	font-weight: bold;
+	color: gray;
+ 	bottom: 0;
+  	width: 100%;
+  	height: 0.1rem;
+
+}
+
+/*Move sign in to left side*/
+.container.left-panel-active .login{
+	transform: translateX(-90%);
+	opacity: 0;
+}
+
+/*Bring sign up over sign in*/
+.container.left-panel-active .signup{
+	transform: translateX(-90%);
+	z-index: 5;
+	opacity: 1;
+}
+
+/*Sign up text positioning*/
+.container.right-panel-active .left{
+	transform: translateX(-100%);
+}
+
+/*Sign in text positioning*/
+.container.left-panel-active .right{
+	transform: translateX(0);
+	z-index: 3;
+}
